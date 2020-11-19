@@ -17,9 +17,11 @@ textArea.onkeyup = () => {
 		textArea.style.color = 'red';
 		textArea.value.slice(0,200);
 		console.log(textArea.value.slice(0,200));
-		return textArea.value.slice(0,200);
 		var warningId = document.getElementById('warn');
 		warningId.style.display = "block";
+		let unWantedMsg = textArea.value.slice(201, name.length);
+		let resP = unWantedMsg;
+		console.log(resP);
 	}
 	else {
 		var warningId = document.getElementById('warn');
@@ -34,3 +36,10 @@ const toGGle = ()=> {
 }
 //Calling the toggle function
 toGGle();
+
+//quick count function
+function countNow() {
+	let cnt = prompt('Count Your Messages First');
+	alert(`YOUR NUMBER OF CHARACTERS IS ${cnt.length}`);
+}
+countNow();
